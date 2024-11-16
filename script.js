@@ -6,13 +6,13 @@
 // Example Output:
 // console.log(reliableMultiply(8, 8)); // outputs 64
 
-class MultiplicatorUnitFailure extends Error {}
+class MultiplicatorUnitFailure extends Error {}  // custom error class that extends te built in error class 
 
-function primitiveMultiply(a, b) {
-  if (Math.random() < 0.2) {
-    return a * b;
-  } else {
-    throw new MultiplicatorUnitFailure("Klunk");
+function primitiveMultiply(a, b) {  // functions that attempts to multiply two numbers 
+  if (Math.random() < 0.2) {   // a random chance of success which is 20% using math.random
+    return a * b;                // if the condition is met return the product of the two numbers
+  } else {                         
+    throw new MultiplicatorUnitFailure("Klunk");   // if not then throw this custom error to show that it failed 
   }
 }
 
