@@ -17,5 +17,16 @@ function primitiveMultiply(a, b) {
 }
 
 function reliableMultiply(a, b) {
-  // Your code here.
+  while (true) {    //keeps trying until it works
+    try{ 
+      return primitiveMultiply(a,b); //Attempt Multiplication
+      } catch (error) {                                 
+      if (!(error instanceof MultiplicatorUnitFailure)) {  
+       throw error;// Re throw if its not the expected error 
+      }
+      console.log("Didn't work Try Again!"); //log when failed 
+    }
+  }
 }
+//Example 
+console.log(reliableMultiply(8, 8));
