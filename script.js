@@ -20,11 +20,11 @@ function reliableMultiply(a, b) {
   while (true) {    //keeps trying until it works
     try{ 
       return primitiveMultiply(a,b); //Attempt Multiplication
-      } catch (error) {                                 
-      if (!(error instanceof MultiplicatorUnitFailure)) {  
+      } catch (error) {                            // if there is an error to catch it        
+      if (!(error instanceof MultiplicatorUnitFailure)) {      // check if the error is the expected type 
        throw error;// Re throw if its not the expected error 
       }
-      console.log("Didn't work Try Again!"); //log when failed 
+      console.log("Didn't work Try Again!"); //log when failed multiplication
     }
   }
 }
