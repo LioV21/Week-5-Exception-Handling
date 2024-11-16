@@ -16,7 +16,7 @@ function primitiveMultiply(a, b) {  // functions that attempts to multiply two n
   }
 }
 
-function reliableMultiply(a, b) {
+function reliableMultiply(a, b) {           // The function to reliably multiply two numbers 
   while (true) {    //keeps trying until it works
     try{ 
       return primitiveMultiply(a,b); //Attempt Multiplication
@@ -29,4 +29,4 @@ function reliableMultiply(a, b) {
   }
 }
 //Example 
-console.log(reliableMultiply(8, 8));
+console.log(reliableMultiply(8, 8));  // example to  run the functions 
